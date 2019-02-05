@@ -14,12 +14,12 @@
 /*Oppgave: installer biblioteket til BlynkSimpleEsp8266.h*/
 
 
-char auth[] = "";
+char auth[] = "7cde1d6484e04b6eb33366756a95d0b7";
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
-char ssid[] = "";
-char pass[] = "";
+char ssid[] = "uit-conference";
+char pass[] = "arctic2017";
 
 BlynkTimer timer;
 int sensorValue = 0;
@@ -53,11 +53,10 @@ void setup()
   digitalWrite(MOISTURE_POWER_PIN, LOW);
   
   //Oppgave: kjør begin på Blynk-objektet, med auth, ssid og pass som argument
-
-  
+  Blynk.begin(auth, ssid, pass);
   
   //Oppgave: opprett en timer som blir kalt hvert sekund.
-  
+  timer.setInterval(1000L, myTimerEvent);
 }
 
 void loop()
@@ -67,4 +66,3 @@ void loop()
 
 
 }
-

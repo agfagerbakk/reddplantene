@@ -5,12 +5,18 @@
  */
 void setup() {
   // Oppgave: Initialiser serieport på 115200 bps
+   Serial.begin(115200);
 
   // Oppgave: Skriv ut melding til serieport
+  Serial.println("hei");
+
 }
 
 void loop() {
   // Oppgave: Skriv ut melding til serieport
-
+  Serial.begin(115200);
+  Serial.println("Loopin");
+  
   // Oppgave: Vent 2 sekunder
+  
 }

@@ -30,9 +30,9 @@ $(document).ready(function(){
 
 	function getMoistureLevel(){
 		$.ajax({
-	  		url: ""})
+	  		url: "http://phant.labben.org:8090/output/opM4MxyaJohQvzQb81d9fvajAWp.json"})
 			.done(function(data) {
-			  	displayValue(data[0].moisture)
+			  	displayValue(data[0].humidity)
 			});
 	}
 

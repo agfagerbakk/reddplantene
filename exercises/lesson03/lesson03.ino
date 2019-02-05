@@ -27,13 +27,18 @@ void setup() {
 void loop() {
 
   //Oppgave: Slå på sensoren
-
+  Serial.begin(115200);
+  pinMode(MOISTURE_PIN, HIGH);
+  pinMode(MOISTURE_POWER_PIN, HIGH);
+  delay(300);
   //Oppgave: Etter du har slått på sensoren venter du 300 ms før du leser av verdien.
+  
   
   sensorValue = analogRead(MOISTURE_PIN);
   
   //Oppgave: slå av sensoren igjen
-  
+  pinMode(MOISTURE_PIN, LOW);
+  pinMode(MOISTURE_POWER_PIN, LOW;
   
 
   Serial.print("Moisture: ");
